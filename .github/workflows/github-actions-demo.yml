@@ -1,9 +1,9 @@
-name: Python CI
+name: Simple Python Script CI
 
 on: [push]
 
 jobs:
-  run-python:
+  run-scripts:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,7 +14,7 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Run scripts
+    - name: Run Python Scripts
       run: |
         python first_text.py
         python second_text.py
