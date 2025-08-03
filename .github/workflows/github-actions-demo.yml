@@ -3,7 +3,7 @@ name: Python CI
 on: [push]
 
 jobs:
-  test:
+  run-python:
     runs-on: ubuntu-latest
 
     steps:
@@ -14,10 +14,7 @@ jobs:
       with:
         python-version: '3.11'
 
-    # Optional: If you use Django, you still need to install it
-    - name: Install Django only (temporary fix)
-      run: pip install django
-
-    - name: Run tests
+    - name: Run scripts
       run: |
-        python manage.py test
+        python first_text.py
+        python second_text.py
