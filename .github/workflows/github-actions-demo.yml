@@ -14,11 +14,10 @@ jobs:
       with:
         python-version: '3.11'
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+    # Optional: If you use Django, you still need to install it
+    - name: Install Django only (temporary fix)
+      run: pip install django
 
     - name: Run tests
       run: |
-        python manage.py test  # for Django
+        python manage.py test
